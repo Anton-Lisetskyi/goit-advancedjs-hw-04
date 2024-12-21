@@ -44,6 +44,7 @@ try {
         backgroundColor: '#ef4040',
         messageColor: 'white',
       });
+      loadMoreBtn.classList.add('is-hidden');
       return;
     }
 

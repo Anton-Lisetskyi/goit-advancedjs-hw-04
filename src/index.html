@@ -1,23 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
 
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>goit-advancedjs-hw-04</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <script src="./main.js" type="module"></script>
+</head>
 
-    <load src="./partials/footer.html" />
+<body>
+  <main>
+    <form id="search-form" class="search-form">
+      <input type="text" name="search" placeholder="Search for images..." required />
+      <button type="submit">Search</button>
+    </form>
 
-    <script type="module" src="./main.js"></script>
-  </body>
+    <p class="not-found-img" style="display: none;">No images found!</p>
+
+    <ul class="images-div"></ul>
+
+
+    <button class="load-more js-load-more is-hidden" type="button">Load more</button>
+
+
+    <div class="loaderClass" style="display: none;">
+      <span>Loading...</span>
+    </div>
+  </main>
+</body>
+
 </html>

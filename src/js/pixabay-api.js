@@ -19,9 +19,9 @@ async function getImg(searchValue, page = 1) {
   try {
     const res = await axios.get(url, { params: searchParams });
 
-    if (!res.data || !res.data.hits || res.data.hits.length === 0) {
-  throw new Error('No images found for the query.');
-}
+    if (!res.data.hits || res.data.hits.length === 0) {
+      throw new Error('No images found for the query.');
+    }
 
     return res.data;
   } catch (error) {

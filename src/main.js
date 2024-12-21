@@ -44,7 +44,6 @@ try {
         backgroundColor: '#ef4040',
         messageColor: 'white',
       });
-      loadMoreBtn.classList.add('is-hidden');
       return;
     }
 
@@ -61,13 +60,15 @@ try {
     } else {
       loadMoreBtn.classList.add('is-hidden');
     }
-  } catch (error) {
+} catch (error) {
+   loadMoreBtn.classList.add('is-hidden');
     iziToast.show({
       title: '❌',
-      message: `Something went wrong: ${error.message}`,
+      message: `${error.message}`,
       backgroundColor: '#ef4040',
       messageColor: 'white',
     });
+ 
   } finally {
     loaderClass.style.display = 'none';
   }
@@ -104,7 +105,7 @@ async function handleLoadMore() {
   } catch (error) {
     iziToast.show({
       title: '❌',
-      message: `Something went wrong: ${error.message}`,
+      message: `${error.message}`,
       backgroundColor: '#ef4040',
       messageColor: 'white',
     });
